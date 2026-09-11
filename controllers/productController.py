@@ -32,6 +32,7 @@ async def get_product_by_id(product_id: str, response: Response):
     return {"isSuccess": True, "data": serialize_product(product)}
 
 
+
 async def update_product_controller(product_id: str, product: Product, response: Response):
     if not ObjectId.is_valid(product_id):
         response.status_code = 404
